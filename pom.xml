@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.weimai</groupId>
+	<artifactId>dprs</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>dprs</name>
+	<url>http://maven.apache.org</url>
+
+	<modules>
+		<module>dprs-common</module>
+		<module>dprs-facade</module>
+		<module>dprs-service</module>
+		<module>dprs-web</module>
+	</modules>
+
+	<parent>
+		<groupId>com.weimai</groupId>
+		<artifactId>weimai-parent</artifactId>
+		<version>0.0.2-RELEASE</version>
+	</parent>
+	<!-- 定义项目模块版本号 -->
+	<properties>
+		<!-- common模块和facade模块 涉及到变更，请升级版本号，保证向下兼容 -->
+		<dprs-common.version>0.0.1-SNAPSHOT</dprs-common.version>
+		<dprs-facade.version>0.0.1-SNAPSHOT</dprs-facade.version>
+		<!-- service模块 永不升级 非线上环境：0.0.1-SNAPSHOT 生产环境：0.0.1 -->
+		<dprs-service.version>0.0.1-SNAPSHOT</dprs-service.version>
+	</properties>
+	<!-- 管理本项目模块版本号 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.weimai</groupId>
+				<artifactId>dprs-common</artifactId>
+				<version>${dprs-common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.weimai</groupId>
+				<artifactId>dprs-facade</artifactId>
+				<version>${dprs-facade.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.weimai</groupId>
+				<artifactId>dprs-service</artifactId>
+				<version>${dprs-service.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- Start:内部组件 显示声明依赖版本号，防止版本升级带来的问题 -->
+		<dependency>
+			<groupId>com.weimai</groupId>
+			<artifactId>wm-common</artifactId>
+		</dependency>
+		<!-- End:内部组件 显示声明依赖版本号，防止版本升级带来的问题 -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

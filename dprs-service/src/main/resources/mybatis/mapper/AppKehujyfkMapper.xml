@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.weimai.usercenter.dao.mapper.AppKehujyfkEntityMapper" >
+  <resultMap id="BaseResultMap" type="com.weimai.usercenter.model.entity.AppKehujyfkEntity" >
+    <id column="LIUSHUIHAO" property="liushuihao" jdbcType="BIGINT" />
+    <result column="WEIMAIHAO" property="weimaihao" jdbcType="BIGINT" />
+    <result column="TIJIAOSJ" property="tijiaosj" jdbcType="TIMESTAMP" />
+    <result column="PINGJIAFS" property="pingjiafs" jdbcType="DECIMAL" />
+    <result column="LIANXIXX" property="lianxixx" jdbcType="VARCHAR" />
+    <result column="CHULIREN" property="chuliren" jdbcType="VARCHAR" />
+    <result column="CHULISJ" property="chulisj" jdbcType="TIMESTAMP" />
+    <result column="SHANCHUBZ" property="shanchubz" jdbcType="CHAR" />
+    <result column="XIUGAIRY" property="xiugairy" jdbcType="BIGINT" />
+    <result column="XIUGAIRQ" property="xiugairq" jdbcType="INTEGER" />
+    <result column="XIUGAISJ" property="xiugaisj" jdbcType="INTEGER" />
+    <result column="CHUANGJIANRY" property="chuangjianry" jdbcType="BIGINT" />
+    <result column="CHUANGJIANRQ" property="chuangjianrq" jdbcType="INTEGER" />
+    <result column="CHUANGJIANSJ" property="chuangjiansj" jdbcType="INTEGER" />
+    <result column="SHIJIANCHUO" property="shijianchuo" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    LIUSHUIHAO, WEIMAIHAO, TIJIAOSJ, PINGJIAFS, LIANXIXX, CHULIREN, CHULISJ, SHANCHUBZ, 
+    XIUGAIRY, XIUGAIRQ, XIUGAISJ, CHUANGJIANRY, CHUANGJIANRQ, CHUANGJIANSJ, SHIJIANCHUO
+  </sql>
+</mapper>

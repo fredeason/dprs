@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weimai.usercenter.dao.ext.AppKehujyfkDao">
+  <resultMap id="BaseResultMap" type="com.weimai.usercenter.model.entity.AppKehujyfkEntity" extends="com.weimai.usercenter.dao.mapper.AppKehujyfkEntityMapper.BaseResultMap">
+   
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+  		LIUSHUIHAO,
+  		WEIMAIHAO,
+  		TIJIAOSJ,
+  		JIANYINR,
+  		PINGJIAFS,
+  		LIANXIXX,
+  		CHULIREN,
+  		CHULIJG,
+  		CHULISJ,
+  		SHANCHUBZ,
+  		XIUGAIRY,
+  		XIUGAIRQ,
+  		XIUGAISJ,
+  		CHUANGJIANRY,
+  		CHUANGJIANRQ,
+  		CHUANGJIANSJ,
+  		SHIJIANCHUO
+  </sql>
+  
+		
+  
+  
+  
+
+  
+  
+</mapper>
